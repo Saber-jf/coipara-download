@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @font-face {
+    font-family: Jeko-Extra-Bold;
+    src: url(/font/Jeko-Extra-Bold.ttf);
+  }
+  @font-face {
+    font-family: Jeko-Semi-Bold;
+    src: url(/font/Jeko-Semi-Bold.ttf);
+  }
+  @font-face {
+    font-family: Jeko-Bold;
+    src: url(/font/Jeko-Bold.ttf);
+  }
+  @font-face {
+    font-family: Jeko-Medium;
+    src: url(/font/Jeko-Medium.ttf);
+  }
+  @font-face {
+    font-family: Jeko-Regular;
+    src: url(/font/Jeko-Regular.ttf);
+  }
+  @font-face {
+    font-family: Jeko-Thin;
+    src: url(/font/Jeko-Thin.ttf);
+  }
+  @font-face {
+    font-family: Jeko-Variable;
+    src: url(/font/Jeko-Variable.ttf);
+  }
+  @font-face {
+    font-family: Jeko-Light;
+    src: url(/font/Jeko-Light.ttf);
+  }
+
+  :root {
+    --Sys-Text-Title-Primary: #07080c;
+    --Sys-Text-Title-Brand: #015dfa;
+    --Sys-Text-Paragraph-Primary: #07080c;
+    --Sys-Text-Paragraph-Secondary: #535868;
+    --Sys-Surface-Primary: #ffffff;
+    --Sys-Surface-Secondary: #f7f8fc;
+    --Sys-Surface-Tertiary: #edeff5;
+    --light-blue: #dfe7ff;
+    --header-border : #dfe7ff;
+    --Sys-Border-Primary: rgba(103, 117, 161, 0.16);
+    --Sys-Border-Secondary: rgba(103, 117, 161, 0.22);
+    --invite-section-text: #dfe7ff;
+    --invite-section-card: #07080C;
+    --blue-light-toDark:#dfe7ff;
+    --blue-dark-tolight: #015dfa;
+    --download-section: #0E1017;
+  }
+  html[data-theme="light"] {
+    --Sys-Text-Title-Primary: #07080c;
+    --Sys-Text-Title-Brand: #015dfa;
+    --Sys-Text-Paragraph-Primary: #07080c;
+    --Sys-Text-Paragraph-Secondary: #535868;
+    --Sys-Surface-Primary: #ffffff;
+    --Sys-Surface-Secondary: #f7f8fc;
+    --Sys-Surface-Tertiary: #edeff5;
+    --light-blue: #dfe7ff;
+    --header-border : #dfe7ff;
+    --Sys-Border-Primary: rgba(103, 117, 161, 0.16);
+    --Sys-Border-Secondary: rgba(103, 117, 161, 0.22);
+    --invite-section-text : #dfe7ff;
+    --invite-section-card: #07080C;
+    --blue-light-toDark:#dfe7ff;
+    --blue-dark-tolight: #015dfa;
+    --download-section: #0E1017;
+
+  
+  }
+
+  html[data-theme="dark"] {
+    --Sys-Text-Title-Primary: #ffffff;
+    --Sys-Text-Title-Brand: #407fff;
+    --Sys-Text-Paragraph-Primary: #ffffff;
+    --Sys-Text-Paragraph-Secondary: #aaacb7;
+    --Sys-Surface-Secondary: #0e1017;
+    --Sys-Surface-Primary: #151822;
+    --Sys-Surface-Tertiary: #1c202c;
+    --header-border : #151822;
+    --light-blue: #dfe7ff;
+    --Sys-Border-Primary: rgba(103, 117, 161, 0.16);
+    --Sys-Border-Secondary: rgba(103, 117, 161, 0.22);
+    --invite-section-text : #07080C;
+    --invite-section-card: #dfe7ff;
+    --blue-light-toDark: #015dfa;
+    --blue-dark-tolight: #BFD0FF;
+    --download-section: #F7F8FC;
+  }
+
+  .buttonShadow {
+    box-shadow: 0px 3.24119px 0px rgba(0, 0, 0, 0.05);
+  }
+  .content-auto {
+    content-visibility: auto;
+  }
+  .JekoExtraBold {
+    font-family: Jeko-Extra-Bold;
+  }
+  .JekoSemiBold {
+    font-family: Jeko-Semi-Bold;
+  }
+  .JekoBold {
+    font-family: Jeko-Bold;
+  }
+  .JekoMedium {
+    font-family: Jeko-Medium;
+  }
+  .JekoRegular {
+    font-family: Jeko-Regular;
+  }
+  .JekoThin {
+    font-family: Jeko-Thin;
+  }
+  .JekoVariable {
+    font-family: Jeko-Variable;
+  }
+  .JekoLight {
+    font-family: Jeko-Light;
+  }
+  .closeHamburger {
+    width: 0;
+  }
+  .openHamburger {
+    width: 342px;
+  }
+  
+  .closeDrDw {
+    display: none;
+  }
+  .openDrDw {
+    display: block;
+  }
+  .isShown{
+    display: block;
+  }
+  .notShown{
+    display: none;
+  }
+  @keyframes logo-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.logo-spin {
+    animation: logo-rotate 5s linear infinite;
+}
+ 
+}

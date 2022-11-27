@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href=”./output.css” rel=”stylesheet”>
+    <link rel="stylesheet" href="./output.css" />
+    <title>coinpara download orginal</title>
+  </head>
+  <body class="w-full bg-lightBachround relative">
+    <!----------------------------------NAVBAR-desktop---------------------------------------------------->
+    <div
+      class="hidden lg:block w-full py-4 border border-headerBorder fixed top-0 z-50 bg-lightBachround"
+    >
+      <div
+        class="w-full px-8 max-w-[1224px] flex items-center justify-between mx-auto"
+      >
+        <div class="flex items-center">
+          <div class="w-[150px] lightModeElements isShown">
+            <object
+              data="../photo/logo-lightMode.svg"
+              width="100%"
+            ></object>
+          </div>
+          <div class="w-[150px] darkModeElements notShown">
+            <object
+              data="../photo/Logo-darkMode.svg"
+              width="100%"
+            ></object>
+          </div>
+          <div class="ml-6 flex items-center gap-[30px] text-secondaryBlack">
+            <a
+              href="https://www.coinpara.com/markets"
+              target="_blank"
+              class="text-sm JekoLight font-semibold cursor-pointer"
+              >Piyasalar</a
+            >
+            <div
+              onmouseenter="drDwOpenFunction()"
+              onmouseleave="drDwCloseFunction()"
+              class="relative h-auto"
+            >
+              <span class="text-sm JekoLight font-semibold cursor-pointer"
+                >Al/Sat</span
+              >
+              <div class="absolute">
+                <div
+                  x-show="false"
+                  id="dropDown"
+                  class="w-[280px] mt-6 closeDrDw overflow-hidden transition-all bg-backGroundWhite shadow-xl rounded-b-lg"
+                >
+                  <ul class="p-4 space-y-6">
+                    <li class="flex items-center gap-2 cursor-pointer">
+                      <div class="w-5 h-5">
+                        <object
+                          data="../photo/icon-buy-crypto.svg"
+                          width="100%"
+                        ></object>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <a
+                          target="_blank"
+                          href="https://www.coinpara.com/markets/btc-try"
+                          class="text-sm font-semibold text-secondaryBlack"
+                          >Spot</a
+                        >
+                        <span class="text-xs font-medium text-textGray_4"
+                          >This is a support text for content</span
+                        >
+                      </div>
+                    </li>
+                    <li class="flex items-center gap-2 cursor-pointer">
+                      <div class="w-5 h-5">
+                        <object
+                          data="../photo/icon-easySellBuy.svg"
+                          width="100%"
+                        ></object>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <a
+                          href="https://www.coinpara.com/instant/btc-try"
+                          target="_blank"
+                          class="text-sm font-semibold text-secondaryBlack"
+                          >Kolay Al/Sat</a
+                        >
+                        <span class="text-xs font-medium text-textGray_4"
+                          >This is a support text for content</span
+                        >
+                      </div>
+                    </li>
+                    <li class="flex items-center gap-2 cursor-pointer">
+                      <div class="w-5 h-5">
+                        <object
+                          data="../photo/icon-swap.svg"
+                          width="100%"
+                        ></object>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <span class="text-sm font-semibold text-secondaryBlack"
+                          >Kripto Takasi
+                          <span
+                            class="px-[3px] py-1 ml-3 text-textBlue rounded-full bg-lightBlue"
+                          >
+                            çok yakında
+                          </span>
+                        </span>
+                        <span class="text-xs font-medium text-textGray_4"
+                          >This is a support text for content</span
+                        >
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="https://www.coinpara.com/academy"
+              target="_blank"
+              class="text-sm JekoLight font-semibold cursor-pointer"
+              >Akademi</a
+            >
+            <a
+              href="https://www.coinpara.com/kurumsal/blog"
+              target="_blank"
+              class="text-sm JekoLight font-semibold cursor-pointer"
+              >Blog</a
+            >
+          </div>
+        </div>
+        <div class="flex items-center gap-4 text-secondaryBlack">
+          <a
+            href="https://www.coinpara.com/auth/signin"
+            target="_blank"
+            class="text-sm JekoLight font-semibold"
+            >Giriş Yap</a
+          >
+          <a
+            href="https://www.coinpara.com/auth/signup"
+            target="_blank"
+            class="py-[6px] px-[14px] text-xs font-normal text-white bg-primaryBlue rounded-md"
+          >
+            Kayıt ol
+          </a>
+          <div class="flex items-center gap-1">
+            <a href="#" target="_blank" class="text-sm JekoLight font-semibold"
+              >indir</a
+            >
+            <div class="lightModeElements isShown text-sm JekoLight font-semibold  w-[20px]">
+              <object
+                data="../photo/icon-mobile-download.svg"
+                width="100%"
+              ></object>
+            </div>
+            <div class="darkModeElements notShown text-sm JekoLight font-semibold  w-[20px]">
+              <object
+                data="../photo/mobile-download-darkMode.svg"
+                width="100%"
+              ></object>
+            </div>
+           
+          </div>
+          <div
+            onclick="toDark()"
+            class="lightModeElements isShown  text-sm JekoLight font-semibold w-[20px] h-5  relative"
+          >
+            <object data="../photo/icon-moon.svg" width="100%"></object>
+            <div class="absolute top-0 bottom-0 left-0 right-0 z-40" ></div>
+          </div>
+          <div
+            onclick="toLight() "
+            class="darkModeElements notShown text-sm JekoLight font-semibold w-[20px] h-5 relative"
+          >
+            <object data="../photo/icon-sun.svg" width="100%"></object>
+            <div class="absolute top-0 bottom-0 left-0 right-0 z-40" ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!----------------------------------NAVBAR-desktop---------------------------------------------------->
+    <div class="w-full lg:hidden mx-auto overflow-hidden max-w-[1076px]">
+      <div class="px-4 mx-auto">
+        <!-- --------------------------------NAVBAR-mobile------------------------------------------------>
+        <div class="py-[10px]  border-b border-navbarBorder">
+          <nav class="flex justify-between items-center">
+            <div class="w-[150px] lightModeElements isShown">
+              <object
+                data="../photo/logo-lightMode.svg"
+                width="100%"
+              ></object>
+            </div>
+            <div class="w-[150px] darkModeElements notShown">
+              <object
+                data="../photo/Logo-darkMode.svg"
+                width="100%"
+              ></object>
+            </div>
+            <div class="flex items-center justify-between gap-4">
+              <div class="flex items-center">
+                <a
+                  href="https://www.coinpara.com/auth/signin"
+                  target="_blank"
+                  class="py-[6px] px-[14px] text-xs font-normal text-primaryBlue"
+                  >Giriş yap</a
+                >
+
+                <a
+                  href="https://www.coinpara.com/auth/signup"
+                  target="_blank"
+                  class="py-[6px] px-[14px] text-xs font-normal text-white bg-primaryBlue rounded-md"
+                >
+                  Kayıt ol
+                </a>
+              </div>
+
+              <button
+                onclick="openHamburgerMenu()"
+                id="hamburgerIcon"
+                class="w-6 h-6 space-y-1 flex flex-col justify-center items-end"
+                type="button"
+              >
+                <div class="w-[18px] h-[2px] bg-secondaryBlack"></div>
+                <div class="w-[14px] h-[2px] bg-secondaryBlack"></div>
+                <div class="w-[10px] h-[2px] bg-secondaryBlack"></div>
+              </button>
+            </div>
+          </nav>
+        </div>
+
+        <!----------------------------------NAVBAR-mobile---------------------------------------------------->
+        <!----------------------------------hamburger menu---------------------------------------------------->
+        <div
+          id="menu"
+          class="absolute lg:hidden w-full z-50 max-w-[342px] h-screen bg-backGroundWhite right-0 top-0 overflow-hidden whitespace-nowrap transition-all closeHamburger"
+        >
+          <div>
+            <div class="flex justify-end px-4 mt-16">
+              <div onclick="closeHamburgerMenu()" class="w-6 h-6 relative">
+                <div class="w-4 h-[2px] bg-secondaryBlack rotate-45 absolute"></div>
+                <div class="w-4 h-[2px] bg-secondaryBlack -rotate-45 absolute"></div>
+              </div>
+            </div>
+            <div class="flex flex-col justify-center items-center px-6 mt-4">
+              <div class="flex flex-col justify-center items-center w-full">
+                <a
+                  href="https://www.coinpara.com/auth/signin"
+                  target="_blank"
+                  class="text-sm JekoLight font-semibold text-secondaryBlack"
+                  >Giriş Yap</a
+                >
+                <a
+                  href="https://www.coinpara.com/auth/signup"
+                  target="_blank"
+                  class="w-full text-center py-2 bg-primaryBlue mt-4 text-sm tracking-[-0.004] text-white rounded-[10px] leading-6 whitespace-nowrap"
+                >
+                  Kayıt Ol
+                </a>
+              </div>
+              <div class="mt-10 w-full pb-6">
+                <ul class="space-y-7 ">
+                  <li class="text-sm JekoLight font-semibold cursor-pointer text-inviteSectionCard">
+                    <a href="https://www.coinpara.com/markets" target="_blank"
+                      >Piyasalar</a
+                    >
+                  </li>
+                  <li class="text-sm JekoLight font-semibold cursor-pointer text-inviteSectionCard">
+                    <div>
+                      <div class="w-full flex justify-between">
+                        <span>Al/Sat</span>
+                        <div id="ArrowOpen" onclick="drDwOpenMobileFunction()" class="w-5 h-5  relative openDrDw">
+                          <object
+                         data="../photo/icon-arrow-down.svg"
+                         width="100%"
+                          ></object>
+                          <div class="absolute top-0 bottom-0 right-0 left-0 z-30"></div>
+                        </div>
+                        <div id="ArrowClose" onclick="drDwCloseMobileFunction()" class="w-5 h-5 relative rotate-180 closeDrDw ">
+                          <object
+                         data="../photo/icon-arrow-down.svg"
+                         width="100%"
+                          ></object>
+                          <div class="absolute top-0 bottom-0 right-0 left-0 z-30"></div>
+                        </div>
+                        
+                      </div>
+                      
+                      <div id="dropDownMobile" class="pl-3 pt-4  w-full closeDrDw overflow-hidden transition-all bg-backGroundWhite  rounded-b-lg" >
+                            <ul class=" space-y-6">
+                    <li class="flex items-center gap-2 cursor-pointer">
+                      <div class="w-5 h-5">
+                        <object
+                          data="../photo/icon-buy-crypto.svg"
+                          width="100%"
+                        ></object>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <a
+                          target="_blank"
+                          href="https://www.coinpara.com/markets/btc-try"
+                          class="text-sm font-semibold text-secondaryBlack"
+                          >Spot</a
+                        >
+                        <span class="text-xs JekoMedium font-medium text-textGray_4"
+                          >This is a support text for content</span
+                        >
+                      </div>
+                    </li>
+                    <li class="flex items-center gap-2 cursor-pointer">
+                      <div class="w-5 h-5">
+                        <object
+                          data="../photo/icon-easySellBuy.svg"
+                          width="100%"
+                        ></object>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <a
+                          href="https://www.coinpara.com/instant/btc-try"
+                          target="_blank"
+                          class="text-sm font-semibold text-secondaryBlack"
+                          >Kolay Al/Sat</a
+                        >
+                        <span class="text-xs JekoMedium font-medium  text-textGray_4"
+                          >This is a support text for content</span
+                        >
+                      </div>
+                    </li>
+                    <li class="flex items-center gap-2 cursor-pointer">
+                      <div class="w-5 h-5">
+                        <object
+                          data="../photo/icon-swap.svg"
+                          width="100%"
+                        ></object>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <span class="text-sm font-semibold text-secondaryBlack"
+                          >Kripto Takasi
+                          <span
+                            class="px-[3px] py-1 ml-3 text-textBlue rounded-full bg-lightBlue"
+                          >
+                            çok yakında
+                          </span>
+                        </span>
+                        <span class="text-xs JekoMedium font-medium text-textGray_4"
+                          >This is a support text for content</span
+                        >
+                      </div>
+                    </li>
+                            </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="text-sm JekoLight font-semibold cursor-pointer text-inviteSectionCard">
+                    <a href="https://www.coinpara.com/academy" target="_blank"
+                      >Akademi</a
+                    >
+                  </li>
+                  <li class="text-sm JekoLight font-semibold cursor-pointer text-inviteSectionCard">
+                    <a
+                      href="https://www.coinpara.com/kurumsal/blog"
+                      target="_blank"
+                      >Blog</a
+                    >
+                  </li>
+                  <div class="w-full border-b"></div>
+                  <li class="text-sm JekoLight font-semibold cursor-pointer text-inviteSectionCard">
+                    İndir
+                  </li>
+                  <li class="text-sm JekoLight font-semibold cursor-pointer">
+                    <div
+                     onclick="toDark()"
+                     class="lightModeElements isShown  text-sm JekoLight font-semibold w-[20px] h-5  relative"
+                      >
+                       <object data="../photo/icon-moon.svg" width="100%"></object>
+                       <div class="absolute top-0 bottom-0 left-0 right-0 z-40" ></div>
+                    </div>
+                    <div
+                     onclick="toLight() "
+                     class="darkModeElements notShown text-sm JekoLight font-semibold w-[20px] h-5 relative"
+                     >
+                     <object data="../photo/icon-sun.svg" width="100%"></object>
+                     <div class="absolute top-0 bottom-0 left-0 right-0 z-40" ></div>
+                    </div>
+                  </li>
+                  <li class="text-sm JekoLight font-semibold cursor-pointer text-inviteSectionCard">
+                    Dil
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!----------------------------------hamburger menu---------------------------------------------------->
+        
+      </div>
+    </div>
+    <!--------------------------------------- example  ------------------------------------------ -->
+    <!----------------------------------HERO---------------------------------------------------->
+    <div class="bg-[url('/photo/hero-wave.svg')] bg-no-repeat bg-cover w-full pb-8 lg:pb-20 lg:mt-[70px] overflow-hidden">
+      <main class="w-full mx-auto overflow-hidden max-w-[1076px]">
+        <div class="px-4 mx-auto">
+          <!----------------------------------HERO---------------------------------------------------->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 items-center lg:items-center lg:pt-[120px]  gap-8"
+          >
+            <div class="">
+              <div class="flex flex-col">
+                <div>
+                  <span
+                    class="text-5xl lg:text-[72px] font-normal leading-[60px] tracking-[-0.02em] text-primaryBlue JekoExtraBold"
+                    >Coinpara</span
+                  >
+                  <div
+                    class="text-5xl text-secondaryBlack lg:text-[72px] font-normal leading-[60px] tracking-[-0.02em] JekoExtraBold"
+                  >
+                    <span> Her zaman </span>
+                    <div class="flex items-center">
+                      <span> Seninle </span>
+                      <div class="ml-4">
+                        <div class="li w-16 h-10 lg:w-[86px] lg:h-[51px]">
+                          <object
+                            data="../photo/light-heroHeart.svg"
+                            width="100%"
+                          ></object>
+                        </div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lg:w-[386px] mt-2 lg:mt-4">
+                    <span
+                      class="text-sm lg:text-base text-textBlue JekoSemiBold"
+                    >
+                      Bitcoin ve Diğer Kripto Paraları Kolayca Al-Sat ve Güvenle
+                      Sakla
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4 flex items-center gap-11">
+                <div class="flex flex-col gap-4">
+                  <button class="lightModeElements isShown w-[140px] h-[45px] relative">
+                    <a href="#" target="_blank"  class="absolute top-0 bottom-0 left-0 right-0 z-30" ></a>
+                    <object
+                     data="../photo/icon-dark-app-sotre.svg"
+                     width="100%"
+                   ></object>
+                  </button>
+                  <button class="darkModeElements notShown w-[140px] h-[45px] relative">
+                    <a href="#" target="_blank"  class="absolute top-0 bottom-0 left-0 right-0 z-30" ></a>
+                    <object
+                     data="../photo/icon-light-app-sotre.svg"
+                     width="100%"
+                   ></object>
+                  </button>
+                
+             
+             
+              <button class="lightModeElements isShown w-[140px] h-[45px] relative">
+                <a href="#" target="_blank"  class="absolute top-0 bottom-0 left-0 right-0 z-30" ></a>
+                <object
+                  data="../photo/icon-dark-google-store.svg"
+                  width="100%"
+                ></object>
+              </button>
+              <button class="darkModeElements notShown w-[140px] h-[45px] relative">
+                <a href="#" target="_blank"  class="absolute top-0 bottom-0 left-0 right-0 z-30" ></a>
+                <object
+                  data="../photo/icon-light-google-store.svg"
+                  width="100%"
+                ></object>
+              </button>
+                </div>
+                <div class="w-[108px] h-[108px]">
+                  <object data="../photo/QR-code.svg" width="100%"></object>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="w-full max-w-[326px] mx-auto lg:max-w-[520px]">
+                <object data="../photo/dowload-hero.svg" width="100%"></object>
+              </div>
+            </div>
+          </div>
+          <!----------------------------------HERO---------------------------------------------------->
+        </div>
+      </main>
+    </div>
+    <!----------------------------------HERO---------------------------------------------------->
+    <div
+      class="w-full mt-16 grid pt-10 grid-cols-1 lg:grid-cols-2 gap-y-14 justify-items-center lg:items-start gap-x-32 max-w-[1076px] mx-auto"
+    >
+      <div class="px-8 lg:px-0 max-w-[480px] flex flex-col lg:justify-center">
+        <span class="JekoSemiBold text-sm leading-5 text-textBlue">
+          BTC,ETH,SAND,AXS ve Daha Fazlası
+        </span>
+        <span
+          class="JekoExtraBold text-[48px] leading-[48px] tracking-[-.02em] text-secondaryBlack"
+        >
+          Kazananların Tercihi
+          <span class="text-primaryBlue">Coinpara</span>
+        </span>
+        <p class="JekoSemiBold text-base mt-2 text-primaryBlue leading-5">
+          Şimdi indir ve yatırım yapmaya hemen başla
+        </p>
+        <div class="grid grid-cols-2 items-start justify-center w-full pt-4">
+          <div class="flex flex-col gap-7">
+            <div class="flex items-center gap-[11px]">
+              <div class="w-6 h-6">
+                <object
+                  data="../photo/icon-easyToUse.svg"
+                  width="100%"
+                ></object>
+              </div>
+              <span class="text-base font-medium text-textBlack"
+                >Kolay kullanım</span
+              >
+            </div>
+            <div class="flex items-center gap-[11px]">
+              <div class="w-6 h-6">
+                <object
+                  data="../photo/icon-fastUsage.svg"
+                  width="100%"
+                ></object>
+              </div>
+              <span class="text-base font-medium text-textBlack"
+                >Hızlı Al-Sat</span
+              >
+            </div>
+          </div>
+          <div class="flex flex-col gap-7">
+            <div class="flex items-center gap-[11px]">
+              <div class="w-6 h-6">
+                <object data="../photo/icon-safety.svg" width="100%"></object>
+              </div>
+              <span class="text-base font-medium text-textBlack"
+                >Güvenli Platform</span
+              >
+            </div>
+            <div class="flex items-center gap-[11px]">
+              <div class="w-6 h-6">
+                <object data="../photo/icon-RealTime.svg" width="100%"></object>
+              </div>
+              <span class="text-base font-medium text-textBlack"
+                >Gerçek zamanlı veriler</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full max-w-[490px] px-2 flex justify-center items-center">
+        <object data="../photo/downloadPage-example.svg" width="100%"></object>
+      </div>
+    </div>
+
+    <!--------------------------------------- download  -------------------------------------------->
+    <div class="w-full bg-downloadSection flex justify-center mt-20 lg:mt-24 items-center">
+      <div class="flex py-6 gap-4">
+        
+         
+            <button class="lightModeElements isShown w-[140px] h-[45px] relative">
+              <a href="#" target="_blank"  class="absolute top-0 bottom-0 left-0 right-0 z-30" ></a>
+              <object
+               data="../photo/icon-light-app-sotre.svg"
+               width="100%"
+             ></object>
+            </button>
+            <button class="darkModeElements notShown w-[140px] h-[45px] relative">
+              <a href="#" target="_blank"  class="absolute top-0 bottom-0 left-0 right-0 z-30" ></a>
+              <object
+               data="../photo/icon-dark-app-sotre.svg"
+               width="100%"
+             ></object>
+            </button>
+          
+       
+       
+        <button class="lightModeElements isShown w-[140px] h-[45px] relative">
+          <a href="#" target="_blank"  class="absolute top-0 bottom-0 left-0 right-0 z-30" ></a>
+          <object
+            data="../photo/icon-light-google-store.svg"
+            width="100%"
+          ></object>
+        </button>
+        <button class="darkModeElements notShown w-[140px] h-[45px] relative">
+          <a href="#" target="_blank"  class="absolute top-0 bottom-0 left-0 right-0 z-30" ></a>
+          <object
+            data="../photo/icon-dark-google-store.svg"
+            width="100%"
+          ></object>
+        </button>
+
+        <button class="darkModeElements hidden lg:notShown w-[44px] h-[44px] relative">
+          <a href="#" target="_blank"  class="absolute top-0 bottom-0 left-0 right-0 z-30" ></a>
+          <object data="../photo/icon-QR-dark.svg" width="100%"></object>
+        </button>
+        <button class="lightModeElements hidden lg:isShown w-[44px] h-[44px] relative">
+          <a href="#" target="_blank"  class="absolute top-0 bottom-0 left-0 right-0 z-30" ></a>
+          <object data="../photo/icon-QR.svg" width="100%"></object>
+        </button>
+      </div>
+    </div>
+
+    <!------------------------------- invite friends----------------------------------- -->
+    <!-- --------------------- lets start------------------------------------------------------------>
+    <div class="w-full bg-backGroundWhite pt-12 lg:pt-[64px]">
+      <div class="max-w-[1076px] mx-auto ">
+        <div class="w-full">
+          <div class="bg-blueDarkToLight mx-4 lg:mx-0 rounded-[10px]">
+            <div class="p-6 flex flex-col justify-center">
+              <span
+                class="JekoExtraBold text-[32px] lg:text-[40px] text-center leading-[40px] tracking-[-.01em] text-blueLightToDark px-2"
+              >
+                Hemen Kayıt Ol Portfolyonu Oluştur
+              </span>
+              <span
+                class="text-base lg:text-xl JekoLight font-extrabold text-blueLightToDark text-center mt-4"
+              >
+                Onlarca kripto para parmaklarının ucunda
+              </span>
+              <button
+                class="mt-6 w-full text-center py-3 px-[24px] bg-inviteSectionText JekoMedium lg:w-[165px] lg:mx-auto text-base font-semibold tracking-[-0.004] text-primaryBlue rounded-[10px] leading-6"
+              >
+              <a href="https://www.coinpara.com/auth/signup"
+              target="_blank">Hemen Başla</a>
+                
+              </button>
+              <div class="w-full text-center mt-2 ">
+                <span
+                  class="text-base JekoMedium text-textWhite pb-2 text-center w-full"
+                >
+                  Zaten bir hesabın var mı?
+                </span>
+                <a
+                  href="https://www.coinpara.com/auth/signin"
+                  target="_blank"
+                  class="text-base JekoRegular text-textWhite text-center w-full"
+                >
+                  Giriş Yap
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ---------------------footer------------------------------------------------------------>
+        <div
+          class="px-4 lg:px-0 w-full grid grid-cols-2 gap-y-8 lg:grid-cols-6 py-12 lg:py-16"
+        >
+          <div>
+            <span class="text-sm JekoLight font-bold text-textGray_1"
+              >KURUMSAL</span
+            >
+            <ul
+              class="ml-[6px] text-base JekoLight font-bold mt-4 space-y-4 text-textGray_4"
+            >
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/kurumsal/hakkimizda"
+                  target="_blank"
+                  >Hakkımızda</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/kurumsal/kariyer"
+                  target="_blank"
+                  >Kariyer</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a href="https://www.coinpara.com/kurumsal/blog" target="_blank"
+                  >Blog</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.youtube.com/channel/UCupxbBnduBCB-ffaUVanarg"
+                  target="_blank"
+                  >Coinpara TV</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <span class="text-sm JekoLight font-bold text-textGray_1"
+              >ÖZELLİKLER</span
+            >
+            <ul
+              class="ml-[6px] text-base JekoLight font-bold mt-4 space-y-4 text-textGray_4"
+            >
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/ozellikler/duyurular"
+                  target="_blank"
+                  >Duyurular</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/ozellikler/market-komisyonlari"
+                  target="_blank"
+                  >Komisyonlar</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/ozellikler/ucretler"
+                  target="_blank"
+                  >Ücretler</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/ozellikler/platform"
+                  target="_blank"
+                  >Platform</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/ozellikler/nft"
+                  target="_blank"
+                  >NFT</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/ozellikler/coinpara-guvenlik"
+                  target="_blank"
+                  >Güvenlik</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <span class="text-sm JekoLight font-bold text-textGray_1"
+              >KRİPTO PARALAR</span
+            >
+
+            <ul
+              class="ml-[6px] text-base JekoLight font-bold mt-4 space-y-4 text-textGray_4"
+            >
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/kripto-paralar/ethereum"
+                  target="_blank"
+                  >Ethereum</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/kripto-paralar/bitcoin-cash"
+                  target="_blank"
+                  >Bitcoin Cash</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/kripto-paralar/litecoin"
+                  target="_blank"
+                  >Litecoin</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/kripto-paralar/tether"
+                  target="_blank"
+                  >Tether (USDT)</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/kripto-paralar/chiliz"
+                  target="_blank"
+                  >Chiliz</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/kripto-paralar/bitcoin"
+                  target="_blank"
+                  >Bitcoin</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <span class="text-sm JekoLight font-bold text-textGray_1"
+              >YASAL</span
+            >
+            <ul
+              class="ml-[6px] text-base JekoLight font-bold mt-4 space-y-4 text-textGray_4"
+            >
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/yasal/kullanici-sozlesmesi"
+                  target="_blank"
+                  >Kullanıcı Sözleşmesi</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/yasal/gizlilik-politikasi"
+                  target="_blank"
+                  >Gizlilik Politikası</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/yasal/kvkk-aydinlatma-metni"
+                  target="_blank"
+                  >KVKK Aydınlatma Metni</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/yasal/aml-cft-politikasi"
+                  target="_blank"
+                  >AML-CFT Politikası</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/yasal/cerez-politikasi"
+                  target="_blank"
+                  >Çerez Politikası</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <span class="text-sm JekoLight font-bold text-textGray_1"
+              >PİYASALAR</span
+            >
+            <ul
+              class="ml-[6px] text-base JekoLight font-bold mt-4 space-y-4 text-textGray_4"
+            >
+              <li class="cursor-pointer">
+                <a href="https://www.coinpara.com/markets" target="_blank"
+                  >Piyasalar</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/instant/btc-try"
+                  target="_blank"
+                  >Hızlı Al/Sat</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/markets/btc-try"
+                  target="_blank"
+                  >Gelişmiş Al/Sat</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <span class="text-sm JekoLight font-bold text-textGray_1"
+              >YARDIM</span
+            >
+            <ul
+              class="ml-[6px] text-base JekoLight font-bold mt-4 space-y-4 text-textGray_4"
+            >
+              <li class="cursor-pointer">
+                <a href="https://www.coinpara.com/support/" target="_blank"
+                  >Yardım Merkezi</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/support/helpform"
+                  target="_blank"
+                  >Destek Talep Formu</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a
+                  href="https://www.coinpara.com/yardim/iletisim"
+                  target="_blank"
+                  >İletişim</a
+                >
+              </li>
+              <li class="cursor-pointer">
+                <a href="https://www.coinpara.com/affiliate" target="_blank"
+                  >Davet Et</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-full">
+          <div
+            class="px-4 py-8 border-t-2 flex flex-col items-center gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between lg:items-center"
+          >
+          <div class="w-[150px] lightModeElements isShown">
+            <object
+              data="../photo/logo-lightMode.svg"
+              width="100%"
+            ></object>
+          </div>
+          <div class="w-[150px] darkModeElements notShown">
+            <object
+              data="../photo/Logo-darkMode.svg"
+              width="100%"
+            ></object>
+          </div>
+            <div>
+              <span class="text-base JekoRegular text-footerGray">
+                © 2022 Coinpara. All rights reserved.
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- --------------------- footer------------------------------------------------------------>
+      </div>
+    </div>
+
+    <!-- --------------------- lets start------------------------------------------------------------>
+    <script>
+      function openHamburgerMenu() {
+       
+        var element1 = document.getElementById("menu");
+        element1.classList.remove("closeHamburger");
+        var element = document.getElementById("menu");
+        element.classList.add("openHamburger");
+      }
+      function closeHamburgerMenu() {
+        
+        var element1 = document.getElementById("menu");
+        element1.classList.remove("openHamburger");
+        var element = document.getElementById("menu");
+        element.classList.add("closeHamburger");
+      }
+      function drDwOpenFunction() {
+        var element1 = document.getElementById("dropDown");
+        element1.classList.remove("closeDrDw");
+        var element = document.getElementById("dropDown");
+        element.classList.add("openDrDw");
+      }
+      function drDwCloseFunction() {
+        var element1 = document.getElementById("dropDown");
+        element1.classList.remove("openDrDw");
+        var element = document.getElementById("dropDown");
+        element.classList.add("closeDrDw");
+      }
+      function drDwOpenMobileFunction() {
+        var element = document.getElementById("dropDownMobile");
+        element.classList.remove("closeDrDw");
+        element.classList.add("openDrDw");
+        var arrowDown = document.getElementById("ArrowOpen");
+        arrowDown.classList.remove("openDrDw");
+        arrowDown.classList.add("closeDrDw");
+        var arrowUP = document.getElementById("ArrowClose");
+        arrowUP.classList.remove("closeDrDw");
+        arrowUp.classList.add("openDrDw");
+        
+      }
+      function drDwCloseMobileFunction() {
+        var element = document.getElementById("dropDownMobile");
+        element.classList.remove("openDrDw");
+        element.classList.add("closeDrDw");
+        var arrowUP = document.getElementById("ArrowClose");
+        arrowUP.classList.remove("openDrDw");
+        arrowUP.classList.add("closeDrDw");
+        var arrowDown = document.getElementById("ArrowOpen");
+        arrowDown.classList.remove("closeDrDw");
+        arrowDown.classList.add("openDrDw");
+        
+      }
+      function toDark() {
+         modeDark()
+         addDarkElemnts()
+      }
+      function toLight() {
+        modeLight()
+        addLightElemnts()
+      }
+      function modeDark() {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+      function modeLight() {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+      function addDarkElemnts() {
+      var darkMode = document.querySelectorAll(".darkModeElements");
+      var LightMode = document.querySelectorAll(".lightModeElements");
+      LightMode.forEach(item => {
+      item.classList.remove("isShown");
+      item.classList.add("notShown")
+       });
+      darkMode.forEach(item => {
+      item.classList.remove("notShown");
+      item.classList.add("isShown")
+       });
+          }
+      function addLightElemnts() {
+      var darkMode = document.querySelectorAll(".darkModeElements");
+      var LightMode = document.querySelectorAll(".lightModeElements");
+      darkMode.forEach(item => {
+      item.classList.remove("isShown");
+      item.classList.add("notShown")
+       });
+       LightMode.forEach(item => {
+        console.log("ssss")
+      item.classList.remove("notShown");
+      item.classList.add("isShown")
+       });
+          }
+      
+      
+    </script>
+  </body>
+</html>
+
