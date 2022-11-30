@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.2.1 | MIT License | https://tailwindcss.com
+! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -30,6 +30,7 @@
 2. Prevent adjustments of font size after orientation changes in iOS.
 3. Use a more readable tab size.
 4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
 */
 
 html {
@@ -44,6 +45,8 @@ html {
   /* 3 */
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
 }
 
 /*
@@ -584,10 +587,6 @@ video {
   margin-top: 2.5rem;
 }
 
-.mt-\[72px\] {
-  margin-top: 72px;
-}
-
 .ml-4 {
   margin-left: 1rem;
 }
@@ -596,24 +595,12 @@ video {
   margin-top: 0.5rem;
 }
 
-.mt-24 {
-  margin-top: 6rem;
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .ml-\[6px\] {
   margin-left: 6px;
-}
-
-.mt-\[70px\] {
-  margin-top: 70px;
-}
-
-.mt-12 {
-  margin-top: 3rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
 }
 
 .flex {
@@ -958,11 +945,6 @@ video {
   background-color: var(--invite-section-text);
 }
 
-.bg-red-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(153 27 27 / var(--tw-bg-opacity));
-}
-
 .bg-\[url\(\'\/photo\/hero-wave\.svg\'\)\] {
   background-image: url('/photo/hero-wave.svg');
 }
@@ -1033,11 +1015,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1080,40 +1057,20 @@ video {
   padding-top: 1rem;
 }
 
-.pb-20 {
-  padding-bottom: 5rem;
-}
-
-.pt-\[48px\] {
-  padding-top: 48px;
-}
-
-.pb-2 {
-  padding-bottom: 0.5rem;
-}
-
-.pt-5 {
-  padding-top: 1.25rem;
-}
-
-.pt-\[120px\] {
-  padding-top: 120px;
-}
-
-.pt-12 {
-  padding-top: 3rem;
-}
-
-.pb-3 {
-  padding-bottom: 0.75rem;
-}
-
 .pb-8 {
   padding-bottom: 2rem;
 }
 
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 
 .text-center {
@@ -1436,28 +1393,12 @@ html[data-theme="dark"] {
     margin-right: auto;
   }
 
-  .lg\:mt-4 {
-    margin-top: 1rem;
-  }
-
-  .lg\:mt-8 {
-    margin-top: 2rem;
-  }
-
-  .lg\:mt-\[172px\] {
-    margin-top: 172px;
-  }
-
-  .lg\:mt-\[64px\] {
-    margin-top: 64px;
-  }
-
   .lg\:mt-\[70px\] {
     margin-top: 70px;
   }
 
-  .lg\:mt-28 {
-    margin-top: 7rem;
+  .lg\:mt-4 {
+    margin-top: 1rem;
   }
 
   .lg\:mt-24 {
@@ -1534,16 +1475,16 @@ html[data-theme="dark"] {
     padding-bottom: 4rem;
   }
 
-  .lg\:pt-\[64px\] {
-    padding-top: 64px;
+  .lg\:pb-20 {
+    padding-bottom: 5rem;
   }
 
   .lg\:pt-\[120px\] {
     padding-top: 120px;
   }
 
-  .lg\:pb-20 {
-    padding-bottom: 5rem;
+  .lg\:pt-\[64px\] {
+    padding-top: 64px;
   }
 
   .lg\:text-\[72px\] {
